@@ -48,35 +48,26 @@ var searchSong = function (song) {
 
 
 var getMyMovie = function () {
-    var nodeArgs = process.argv;
-    var movieName = "";
-    for (var i = 2; i < nodeArgs.length; i++) {
-        if (i > 2 && i < nodeArgs.length) {
-            movieName = movieName + "+" + nodeArgs[i];
-        } else {
-            movieName += nodeArgs[i];
+    var movieName =process.argv[3];
+    var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+
+    request(queryUrl, function (error, response, body) {
+        console.log(JSON.parse(body));
+        // If the request is successful
+        if (!error && response.statusCode === 200) {
+            var jsonData = JSON.parse(body);
+            console.log('Title: ' + jsonData.Title);
+            console.log('Year: ' + jsonData.Year);
+            console.log('IMDB Rating: ' + jsonData.imdbRating);
+            console.log('Country: ' + jsonData.Country);
+            console.log('Language: ' + jsonData.Language);
+            console.log('Plot: ' + jsonData.Plot);
+            console.log('Actors: ' + jsonData.Actors);
         }
 
-        var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+    });
+}
 
-
-        request(queryUrl, function (error, response, body) {
-
-            // If the request is successful
-            if (!error && response.statusCode === 200) {
-                var jsonData = JSON.parse(body);
-                console.log('Title: ' + jsonData.Title);
-                console.log('Year: ' + jsonData.Year);
-                console.log('IMDB Rating: ' + jsonData.imdbRating);
-                console.log('Country: ' + jsonData.Country);
-                console.log('Language: ' + jsonData.Language);
-                console.log('Plot: ' + jsonData.Plot);
-                console.log('Actors: ' + jsonData.Actors);
-            }
-
-        });
-    }
-};
 
 
 
