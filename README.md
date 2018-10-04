@@ -21,8 +21,7 @@ node liri.js This command will display a list of options to choose from ex."[my-
 
 my-tweets Will display tweets in the command line 
 
-
+[image](./Liri/pic1.png)
 
 
 spotify-this-song This command will ask user to input a song name. Than displays information details from the selected song. 
->>>>>>> 86edb88dc0e5df36fcc00e8f695ed7aedce5d7b5
