@@ -19,13 +19,13 @@ node liri.js This command will display a list of options to choose from ex."[my-
 
 my-tweets Will display tweets in the command line 
 
-![app image](Liri/image/pic1.png)
+![app image](/Liri/image/pic1.png)
 
 spotify-this-song This command will ask user to input a song name. Than displays information details from the selected song. 
-![image](Liri/pic3.png)
+![image](/Liri/image/pic2.png)
 
 
 for request moive 
 
-![image](Liri/pic3.png)
+![image](/Liri/image/pic3.png)
 
