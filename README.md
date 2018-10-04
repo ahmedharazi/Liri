@@ -1,8 +1,7 @@
 # Liri
 
 
-=======
-liri-node-app
+
 Liri is a command line based app similar to siri.
 
 Running the app
